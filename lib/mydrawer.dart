@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutteryt/playlist_video.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({Key? key}) : super(key: key);
@@ -27,7 +28,11 @@ class MyDrawer extends StatelessWidget {
                 child: ListTile(
                   leading: Icon(Icons.menu),
                   title: Text("CodeIgniter",style: TextStyle(fontSize: 18.0),),
-                  onTap: (){},
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context)=> PlaylistVideo(url: "https://myyoutubeapiflutter.herokuapp.com/", title: "Flutter Youtbe",),
+                    ),);
+                  },
 
                 ),
               ),
