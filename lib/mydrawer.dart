@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:flutteryt/main.dart';
 import 'package:flutteryt/playlist_video.dart';
 
 class MyDrawer extends StatelessWidget {
@@ -17,8 +18,10 @@ class MyDrawer extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: ListTile(
                   leading: Icon(Icons.menu),
-                  title: Text("FLutter",style: TextStyle(fontSize: 18.0),),
-                  onTap: (){},
+                  title: Text("Home",style: TextStyle(fontSize: 18.0),),
+                  onTap: (){
+                    Navigator.push(context,MaterialPageRoute(builder: (context)=>MyHomePage()));
+                  },
 
                 ),
               ),
@@ -27,10 +30,10 @@ class MyDrawer extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: ListTile(
                   leading: Icon(Icons.menu),
-                  title: Text("CodeIgniter",style: TextStyle(fontSize: 18.0),),
+                  title: Text("Flutter Tutorial",style: TextStyle(fontSize: 18.0),),
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(
-                      builder: (context)=> PlaylistVideo(url: "https://myyoutubeapiflutter.herokuapp.com/", title: "Flutter Youtbe",),
+                      builder: (context)=> PlaylistVideo(url: "https://myyoutubeapiflutter.herokuapp.com/", title: "Flutter Tutorial",),
                     ),);
                   },
 
